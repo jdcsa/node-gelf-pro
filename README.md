@@ -54,6 +54,8 @@ log.setConfig({
     
     // udp adapter example
     protocol: 'udp4', // udp only; optional; udp adapter: udp4, udp6; default: udp4
+    bufferSize: 1024 * 1024, // udp only; optional; send buffer size (SO_SNDBUF); default: platform dependent
+    lookup: dns.lookup, // udp only; optional; custom lookup functions; default: dns.lookup
     
     // tcp-tls adapter example
     key: fs.readFileSync('client-key.pem'), // tcp-tls only; optional; only if using the client certificate authentication
